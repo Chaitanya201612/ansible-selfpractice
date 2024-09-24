@@ -1,0 +1,5 @@
+- name: Ping the server error
+  hosts: web1
+  tasks:
+- name: server error
+  ansible.builtin.ping:

@@ -1,0 +1,16 @@
+ - name: install ngnix server
+   hosts: web1
+   become: yes
+   tasks: 
+
+   - name: installed ngnix
+     ansible.builtin.package:
+     name: ngnix
+     state: present
+     
+   - name: run ngnix
+     ansible.builtin.service:
+     name: ngnix
+     state: started
+     enableb: yes
+
